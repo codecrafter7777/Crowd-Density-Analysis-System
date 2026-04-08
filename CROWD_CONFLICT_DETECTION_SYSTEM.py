@@ -69,7 +69,7 @@ class MC_CNN(nn.Module):
 @st.cache_resource
 def load_model():
     model = MC_CNN()
-    model.load_state_dict(torch.load(r"C:\Users\Sanved\OneDrive\Desktop\Projects\ML\crowd_counting.pth", map_location=torch.device('cpu')), strict=False)
+    model.load_state_dict(torch.load("crowd_counting.pth", map_location=torch.device('cpu')), strict=False)   
     model.eval()
     return model
 
